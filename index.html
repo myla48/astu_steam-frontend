@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astu smart complaint system</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <img src="image.png" alt="ASTU Logo" class="logo" />
+        <h1>ASTU Smart Complaint and Issue Tracking System</h1>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" onclick="showDashboard('Student', this)">Student</a>
+          </li>
+          <li>
+            <a href="#" onclick="showDashboard('staff', this)">
+              Department Staff</a
+            >
+          </li>
+          <li><a href="#" onclick="showDashboard('admin', this)">Admin</a></li>
+        </ul>
+      </nav>
+
+      <p id="roleDisplay" class="role-display">Logged in as: Student</p>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+          <li>Dashboard</li>
+          <li>Submit complaint</li>
+          <li>Complaint History</li>
+          <li>Analytics</li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <section id="student" class="dashboard active">
+          <h2>Student Dashboard</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Submit Complaint</h3>
+              <p>Report campus issues easily.</p>
+            </div>
+
+            <div class="card">
+              <h3>My Complaint</h3>
+              <p>Track your complaint status.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="staff" class="dashboard">
+          <h2>Department Staff Dashboard</h2>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Assigned Tickets</h3>
+              <p>View and manage complaints.</p>
+            </div>
+
+            <div class="card">
+              <h3>Update status</h3>
+              <p>Move tickets through workflow.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="admin" class="dashboard">
+          <h2>Admin Dahboard</h2>
+
+          <div class="cards">
+            <div class="card">
+              <h3>Total Complaints</h3>
+              <p>Sysyte overview statistics.</p>
+            </div>
+
+            <div class="card">
+              <h3>Analytics</h3>
+              <p>View issue trends and reports.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
