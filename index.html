@@ -43,32 +43,64 @@
       <main class="content">
         <section id="student" class="dashboard active">
           <h2>Student Dashboard</h2>
-          <div class="cards">
-            <div class="card">
-              <h3>Submit Complaint</h3>
-              <p>Report campus issues easily.</p>
-            </div>
 
-            <div class="card">
-              <h3>My Complaint</h3>
-              <p>Track your complaint status.</p>
-            </div>
+          <div class="form-container">
+            <h3>Submit New Complaint</h3>
+
+            <form id="complaintForm">
+              <label>Title</label>
+              <input type="text" id="title" required />
+
+              <label> Category</label>
+              <select id="category">
+                <option>Dormitory</option>
+                <option>Laboratory</option>
+
+                <option>Classroom</option>
+                <option>Library</option>
+              </select>
+
+              <label>Description</label>
+              <input type="file" id="file" />
+
+              <button type="submit">Submit Complaint</button>
+            </form>
+          </div>
+
+          <div class="history-container">
+            <h3>
+              My Complaints
+              <table id="complaintTable">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </h3>
           </div>
         </section>
 
         <section id="staff" class="dashboard">
           <h2>Department Staff Dashboard</h2>
 
-          <div class="cards">
-            <div class="card">
-              <h3>Assigned Tickets</h3>
-              <p>View and manage complaints.</p>
-            </div>
+          <div class="history-container">
+            <h3>Assigned complaints</h3>
+            <table id="staffTable">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Change Status</th>
+                </tr>
+              </thead>
 
-            <div class="card">
-              <h3>Update status</h3>
-              <p>Move tickets through workflow.</p>
-            </div>
+              <tbody></tbody>
+            </table>
           </div>
         </section>
 
@@ -91,5 +123,7 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script src="js/student.js"></script>
+    <script src="js/s.js"></script>
   </body>
 </html>

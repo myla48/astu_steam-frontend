@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Staff Dashboard</h1>
+      <p id="userDisplay"></p>
+      <button onclick="logout()">Logout</button>
+      <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </header>
+
+    <h2>All Complaints</h2>
+
+    <!-- Filter -->
+    <select id="filterStatus" onchange="filterComplaints()">
+      <option value="All">All</option>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Resolved">Resolved</option>
+    </select>
+    <div class="stats-cards">
+      <div class="card">
+        <h3>Total Complaints</h3>
+        <p id="totalComplaints">0</p>
+      </div>
+      <div class="card">
+        <h3>Pending</h3>
+        <p id="pendingComplaints">0</p>
+      </div>
+      <div class="card">
+        <h3>In Progress</h3>
+        <p id="inProgressComplaints">0</p>
+      </div>
+      <div class="card">
+        <h3>Resolved</h3>
+        <p id="resolvedComplaints">0</p>
+      </div>
+    </div>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search complaints..."
+      onkeyup="searchComplaints()"
+    />
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Change Status</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="complaintTableBody"></tbody>
+    </table>
+
+    <script src="js/staff.js"></script>
+  </body>
+</html>
